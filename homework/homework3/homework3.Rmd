@@ -1,0 +1,150 @@
+---
+title: "VE320 Homework3"
+author: "Liu Yihao 515370910207"
+date: "2018-06-13"
+output: 
+  pdf_document:
+    includes:
+      in_header: header.tex
+    latex_engine: xelatex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Ex 3.1
+
+### (a)
+$$n_i=2.4\times10^{13}\unit{cm^{-3}}$$
+
+#### (i)
+$$\frac{N_d-N_a}{2}=\frac{2\times10^{15}\unit{cm^{-3}}}{2}=10^{15}\unit{cm^{-3}}$$
+$$
+\begin{aligned}
+n_0&=\frac{N_d-N_a}{2}+\sqrt{\left(\frac{N_d-N_a}{2}\right)^2+n_i^2}\\
+&=10^{15}\unit{cm^{-3}}+\sqrt{(10^{15}\unit{cm^{-3}})^2+(2.4\times10^{13}\unit{cm^{-3}})^2}\\
+&=2.000\times10^{15}\unit{cm^{-3}}
+\end{aligned}
+$$
+$$p_0=\frac{n_i^2}{n_0}=\frac{(2.4\times10^{13}\unit{cm^{-3}})^2}{2.000\times10^{15}\unit{cm^{-3}}}=2.88\times10^{11}\unit{cm^{-3}}$$
+
+#### (ii)
+$$\frac{N_a-N_d}{2}=\frac{10^{16}\unit{cm^{-3}}-7\times10^{15}\unit{cm^{-3}}}{2}=1.5\times10^{15}\unit{cm^{-3}}$$
+$$
+\begin{aligned}
+p_0&=\frac{N_a-N_d}{2}+\sqrt{\left(\frac{N_a-N_d}{2}\right)^2+n_i^2}\\
+&=1.5\times10^{15}\unit{cm^{-3}}+\sqrt{(1.5\times10^{15}\unit{cm^{-3}})^2+(2.4\times10^{13}\unit{cm^{-3}})^2}\\
+&=3.000\times10^{15}\unit{cm^{-3}}
+\end{aligned}
+$$
+$$n_0=\frac{n_i^2}{p_0}=\frac{(2.4\times10^{13}\unit{cm^{-3}})^2}{3.000\times10^{15}\unit{cm^{-3}}}=1.92\times10^{11}\unit{cm^{-3}}$$
+
+### (b)
+$$n_i=1.8\times10^{6}\unit{cm^{-3}}$$
+
+#### (i)
+$$\frac{N_d-N_a}{2}=\frac{2\times10^{15}\unit{cm^{-3}}}{2}=10^{15}\unit{cm^{-3}}$$
+$$
+\begin{aligned}
+n_0&=\frac{N_d-N_a}{2}+\sqrt{\left(\frac{N_d-N_a}{2}\right)^2+n_i^2}\\
+&=10^{15}\unit{cm^{-3}}+\sqrt{(10^{15}\unit{cm^{-3}})^2+(1.8\times10^{6}\unit{cm^{-3}})^2}\\
+&=2.000\times10^{15}\unit{cm^{-3}}
+\end{aligned}
+$$
+$$p_0=\frac{n_i^2}{n_0}=\frac{(1.8\times10^{6}\unit{cm^{-3}})^2}{2.000\times10^{15}\unit{cm^{-3}}}=1.62\times10^{-3}\unit{cm^{-3}}$$
+
+#### (ii)
+$$\frac{N_a-N_d}{2}=\frac{10^{16}\unit{cm^{-3}}-7\times10^{15}\unit{cm^{-3}}}{2}=1.5\times10^{15}\unit{cm^{-3}}$$
+$$
+\begin{aligned}
+p_0&=\frac{N_a-N_d}{2}+\sqrt{\left(\frac{N_a-N_d}{2}\right)^2+n_i^2}\\
+&=1.5\times10^{15}\unit{cm^{-3}}+\sqrt{(1.5\times10^{15}\unit{cm^{-3}})^2+(1.8\times10^{6}\unit{cm^{-3}})^2}\\
+&=3.000\times10^{15}\unit{cm^{-3}}
+\end{aligned}
+$$
+$$n_0=\frac{n_i^2}{p_0}=\frac{(1.8\times10^{6}\unit{cm^{-3}})^2}{3.000\times10^{15}\unit{cm^{-3}}}=1.08\times10^{-3}\unit{cm^{-3}}$$
+
+### (c)
+It means that there is about only one minor minority carrier every $10^3\unit{cm^3}$.
+
+## Ex 3.2
+
+### (a)
+$$N_a=3\times10^{16}\unit{cm^{-3}},N_d=1.5\times10^{16}\unit{cm^{-3}}$$
+$$n_i=1.5\times10^{10}\unit{cm^{-3}}$$
+Since $N_a>N_d$, it is p-type. And $n_i\ll N_a-N_d$, so the majority carriers are holes, the concentration is
+$$p_0=N_a-N_d=3\times10^{16}\unit{cm^{-3}}-1.5\times10^{16}\unit{cm^{-3}}=1.5\times10^{16}\unit{cm^{-3}}$$
+The minority carriers are electrons, the concentration is
+$$n_0=\frac{n_i^2}{p_0}=\frac{(1.5\times10^{10}\unit{cm^{-3}})^2}{1.5\times10^{16}\unit{cm^{-3}}}=1.5\times10^{4}\unit{cm^{-3}}$$
+
+### (b)
+$$p_0=N_a+\Delta N_a-N_d$$
+$$\Delta N_a'=p_0-(N_a-N_d)=5\times10^{16}\unit{cm^{-3}}-1.5\times10^{16}\unit{cm^{-3}}=3.5\times10^{16}\unit{cm^{-3}}$$
+$$n_0=\frac{n_i^2}{p_0}=\frac{(1.5\times10^{10}\unit{cm^{-3}})^2}{5\times10^{16}\unit{cm^{-3}}}=4.5\times10^{3}\unit{cm^{-3}}$$
+
+## Ex 3.3
+
+### (a)
+$$n_0=\frac{N_d}{2}+\sqrt{\left(\frac{N_d}{2}\right)^2+n_i^2}=\frac{N_d}{0.95}=1.05\times10^{15}\unit{cm^{-3}}$$
+$$n_i^2=\left(\frac{N_d}{0.95}-\frac{N_d}{2}\right)^2-\left(\frac{N_d}{2}\right)^2=\left(\frac{10^{15}\unit{cm^{-3}}}{0.95}-\frac{10^{15}\unit{cm^{-3}}}{2}\right)^2-\left(\frac{10^{15}\unit{cm^{-3}}}{2}\right)^2=5.25\times10^{28}\unit{cm^{-6}}$$
+$$n_i^2=N_cN_v\left(\frac{T}{T_0}\right)^3\exp\left[\frac{-E_g}{kT}\right]$$
+$$5.25\times10^{28}\unit{cm^{-6}}=2.8\times10^{19}\unit{cm^{-3}}\cdot1.04\times10^{19}\unit{cm^{-3}}\left(\frac{T}{300\unit{K}}\right)^3\exp\left[\frac{-1.12\unit{eV}}{8.62\times10^{-5}\unit{eV/K}\cdot T}\right]$$
+$$T=537.25\unit{K}$$
+
+### (b)
+For $T=300K$,
+$$E_c-E_F=kT\ln\left[\frac{N_c}{n_0}\right]=0.0259\unit{eV}\ln\left[\frac{2.8\times10^{19}\unit{cm^{-3}}}{1.05\times10^{15}\unit{cm^{-3}}}\right]=2.64\times10^{-1}\unit{eV}$$
+For $T=537.25\unit{K}$,
+$$kT=8.62\times10^{-5}\unit{eV/K}\cdot537.25\unit{K}=4.63\times10^{-2}\unit{eV}$$
+$$N_c'=N_c\left(\frac{T}{T_0}\right)^{3/2}=2.8\times10^{19}\unit{cm^{-3}}\cdot\left(\frac{537.25\unit{K}}{300\unit{K}}\right)^{3/2}=6.71\times10^{19}\unit{cm^{-3}}$$
+$$E_c-E_F=kT\ln\left[\frac{N_c}{n_0}\right]=4.63\times10^{-2}\unit{eV}\ln\left[\frac{6.71\times10^{19}\unit{cm^{-3}}}{1.05\times10^{15}\unit{cm^{-3}}}\right]=5.12\times10^{-1}\unit{eV}$$
+So
+$$\Delta(E_c-E_F)=5.12\times10^{-1}\unit{eV}-2.64\times10^{-1}\unit{eV}=2.48\times10^{-1}\unit{eV}$$
+
+### (c)
+It is closer to the intrinsic value at high temperature.
+
+## Ex 3.4
+
+### (a)
+$$E_{Fi}-E_{midgap}=\frac{3}{4}kT\ln\left[\frac{m_p^*}{m_n^*}\right]=\frac{3}{4}\cdot0.0259\unit{eV}\cdot\ln10=4.47\times10^{-2}\unit{eV}$$
+
+### (b)
+
+#### (i)
+Since impurity atoms are added so that $E_{Fi}<E_{midgap}$, it is p-type, acceptors should be added.
+
+#### (ii)
+$$E_{Fi}-E_F=0.45\unit{eV}+4.47\times10^{-2}\unit{eV}=0.494\unit{eV}$$
+$$p_0=n_i\exp\left[\frac{E_{Fi}-E_F}{kT}\right]=10^5\unit{cm^{-3}}\cdot\exp\left[\frac{0.494\unit{eV}}{0.0259\unit{eV}}\right]=1.92\times10^{13}\unit{cm^{-3}}$$
+
+## Ex 3.5
+
+### (a)
+When replacing gallium, silcon is the donor,
+$$N_d=0.05\cdot7\times10^{15}\unit{cm^{-3}}=3.5\times10^{14}\unit{cm^{-3}}$$
+When replacing arsenic, silcon is the accepetor,
+$$N_a=0.95\cdot7\times10^{15}\unit{cm^{-3}}=6.65\times10^{15}\unit{cm^{-3}}$$
+
+### (b)
+Since $N_a>N_d$, it is p-type.
+
+### (c)
+$$n_i=1.8\times10^{6}\unit{cm^{-3}}$$
+Since $n_i\ll N_a-N_d$, so the majority carriers are holes, the concentration is
+$$p_0=N_a-N_d=6.65\times10^{15}\unit{cm^{-3}}-3.5\times10^{14}\unit{cm^{-3}}=6.3\times10^{15}\unit{cm^{-3}}$$
+The minority carriers are electrons, the concentration is
+$$n_0=\frac{n_i^2}{p_0}=\frac{(1.8\times10^{6}\unit{cm^{-3}})^2}{6.3\times10^{15}\unit{cm^{-3}}}=5.14\times10^{-4}\unit{cm^{-3}}$$
+
+### (d)
+$$E_{Fi}-E_F=kT\ln\left[\frac{p_0}{n_i}\right]=0.0259\unit{eV}\ln\left[\frac{6.3\times10^{15}\unit{cm^{-3}}}{1.8\times10^{6}\unit{cm^{-3}}}\right]=5.69\times10^{-1}\unit{eV}$$
+
+## Ex 3.6
+
+
+
+
+
+
+
