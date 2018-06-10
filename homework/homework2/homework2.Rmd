@@ -1,0 +1,125 @@
+---
+title: "VE320 Homework2"
+author: "Liu Yihao 515370910207"
+date: "2018-06-06"
+output: 
+  pdf_document:
+    includes:
+      in_header: header.tex
+    latex_engine: xelatex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Ex 2.1
+
+```{r ex1}
+func <- function(x) {1.170-4.73e-4*x^2/(636+x)}
+curve(func, from = 0, to = 600, xlab = 'T', ylab = 'eV')
+points(300, func(300))
+text(350, func(300), labels = '300K')
+```
+
+## Ex 2.2
+For A, $E-E_v=-C_2k^2$, 
+$$0-0.025\unit{eV}\cdot1.6\times10^{-19}=-C_2\cdot(0.08\times10^{10}\unit{m^{-1}})^2$$
+$$C_2=6.25\times10^{-39}\unit{V/m^2}$$
+$$m^*=\frac{\hbar^2}{-2C_2}=\frac{(1.054\times10^{-34}\unit{J\cdot s})^2}{-2\cdot6.25\times10^{-39}\unit{V/m^2}}=-8.89\times10^{-31}\unit{kg}=-0.98m_0$$
+For B, $E-E_v=-C_2k^2$, 
+$$0-0.3\unit{eV}\cdot1.6\times10^{-19}=-C_2\cdot(0.08\times10^{10}\unit{m^{-1}})^2$$
+$$C_2=7.5\times10^{-38}\unit{V/m^2}$$
+$$m^*=\frac{\hbar^2}{-2C_2}=\frac{(1.054\times10^{-34}\unit{J\cdot s})^2}{-2\cdot7.5\times10^{-38}\unit{V/m^2}}=-7.41\times10^{-32}\unit{kg}=-0.08m_0$$
+
+## Ex 2.3
+$$E=\frac{p^2}{2m}=\frac{k^2\hbar^2}{2m}$$
+$$k=\sqrt{\frac{2mE}{\hbar^2}}$$
+$$\frac{dk}{dE}=\sqrt{\frac{m}{2\hbar^2E}}$$
+$$g_T(k)dk=\frac{\pi k^2dk}{\pi^3}$$
+$$g(E)dE=\frac{2\pi mE}{\hbar^2\pi^3}\sqrt{\frac{m}{2\hbar^2E}}dE=\frac{2\pi m^{3/2}\sqrt{E}}{\hbar^3\pi^3\sqrt{2}}dE=\frac{4\pi(2m)^{3/2}}{h^3}\sqrt{E}dE$$
+$$g(E)=\frac{4\pi(2m)^{3/2}}{h^3}\sqrt{E}$$
+
+## Ex 2.4
+$$f_F=\exp\left[\frac{-(E-E_F)}{kT}\right]=\exp\left[\frac{-(E_c+kT-E_F)}{kT}\right]$$
+$$1-f_F=\exp\left[\frac{-(E_F-E_E)}{kT}\right]=\exp\left[\frac{-(E_F-(E_v-kT))}{kT}\right]$$
+$$\exp\left[\frac{-(E_c+kT-E_F)}{kT}\right]=\exp\left[\frac{-(E_F-(E_v-kT))}{kT}\right]$$
+$$E_c+kT-E_F=E_F-(E_v-kT)$$
+$$E_F=\frac{E_c+E_v}{2}$$
+
+## Ex 2.5
+
+### (a)
+$$kT= 8.62\times10^{-5}\unit{eV/K}\cdot200\unit{K}=1.724\times10^{-2}\unit{eV}$$
+$$f_F=0.05=\frac{1}{1+\exp\left[\frac{E-E_F}{kT}\right]}$$
+$$E-E_F=kT\ln19=5.076\times10^{-2}\unit{eV}$$
+$$f_F=0.95=\frac{1}{1+\exp\left[\frac{E-E_F}{kT}\right]}$$
+$$E-E_F=kT\ln\frac{1}{19}=-5.076\times10^{-2}\unit{eV}$$
+$$\Delta E=5.076\times10^{-2}\unit{eV}\cdot 2=1.016\times10^{-1}\unit{eV}$$
+
+### (b)
+$$kT= 8.62\times10^{-5}\unit{eV/K}\cdot200\unit{K}=3.448\times10^{-2}\unit{eV}$$
+$$E-E_F=kT\ln19=1.015\times10^{-1}\unit{eV}$$
+$$E-E_F=kT\ln\frac{1}{19}=-1.015\times10^{-1}\unit{eV}$$
+$$\Delta E=1.015\times10^{-1}\unit{eV}\cdot 2=2.03\times10^{-1}\unit{eV}$$
+
+## Ex 2.6
+$$E_{Fi}-E_{midgap}=\frac{3}{4}kT\ln\frac{m_p^*}{m_n^*}$$
+For $T=200K$, $kT=1.724\times10^{-2}\unit{eV}$,
+$$E_{Fi}-E_{midgap}=\frac{3}{4}\cdot1.724\times10^{-2}\unit{eV}\cdot\ln\frac{0.56}{1.08}=-8.49\times10^{-3}\unit{eV}$$
+For $T=400K$, $kT=3.448\times10^{-2}\unit{eV}$,
+$$E_{Fi}-E_{midgap}=\frac{3}{4}\cdot3.448\times10^{-2}\unit{eV}\cdot\ln\frac{0.56}{1.08}=-1.70\times10^{-2}\unit{eV}$$
+For $T=600K$, $kT=5.172\times10^{-2}\unit{eV}$,
+$$E_{Fi}-E_{midgap}=\frac{3}{4}\cdot5.172\times10^{-2}\unit{eV}\cdot\ln\frac{0.56}{1.08}=-2.55\times10^{-2}\unit{eV}$$
+
+## Ex 2.7
+$$n_0=\int g_c(E)f_F(E)dE=K\int f_F(E)dE$$
+$$f_F(E)=\frac{1}{1+\exp\left[\frac{E-E_F}{kT}\right]}\approx\exp\left[\frac{-(E-E_F)}{kT}\right]$$
+$$\int_{E_c}^\infty\exp\left[\frac{-(E-E_F)}{kT}\right]=kT\exp\left[\frac{-(E_c-E_F)}{kT}\right]$$
+$$n_0\approx KkT\exp\left[\frac{-(E_c-E_F)}{kT}\right]$$
+
+## Ex 2.8
+
+### (a)
+$$E_F-E_v=kT\ln\frac{N_v}{p_0}=0.0259\unit{eV}\cdot\ln\frac{1.04\times10^{19}\unit{cm^{-3}}}{2\times10^{16}\unit{cm^3}}=1.62\times10^{-1}\unit{eV}$$
+
+### (b)
+$$E_c-E_F=E_g-(E_F-E_v)=1.12\unit{eV}-1.62\times10^{-1}\unit{eV}=9.58\times10^{-1}\unit{eV}$$
+
+### (c)
+$$n_0=N_c\exp\left[\frac{-(E_c-E_F)}{kT}\right]=2.8\times10^{19}\unit{cm^{-3}}\exp\left[\frac{-9.58\times10^{-1}\unit{eV}}{0.0259\unit{eV}}\right]=2.42\times10^3\unit{cm^{-3}}$$
+
+### (d)
+$$n_i=\sqrt{p_0n_0}=\sqrt{2\times10^{16}\unit{cm^{-3}}\cdot2.42\times10^3\unit{cm^{-3}}}=6.96\times10^9\unit{cm^{-3}}$$
+$$E_{Fi}-E_F=kT\ln\frac{p_0}{n_i}=0.0259\unit{eV}\cdot\ln\frac{2\times10^{16}\unit{cm^{-3}}}{6.96\times10^9\unit{cm^{-3}}}=3.85\times10^{-1}\unit{eV}$$
+
+## Ex 2.9
+### (a)
+$$E_F-E_v=kT\ln\frac{N_v}{p_0}=0.0259\unit{eV}\cdot\ln\frac{1.04\times10^{19}\unit{cm^{-3}}}{5\times10^{15}\unit{cm^3}}=1.98\times10^{-1}\unit{eV}$$
+
+### (b)
+$$E_c-E_F=E_g-(E_F-E_v)=1.12\unit{eV}-1.98\times10^{-1}\unit{eV}=9.22\times10^{-1}\unit{eV}$$
+
+### (c)
+$$n_0=N_c\exp\left[\frac{-(E_c-E_F)}{kT}\right]=2.8\times10^{19}\unit{cm^{-3}}\exp\left[\frac{-9.22\times10^{-1}\unit{eV}}{0.0259\unit{eV}}\right]=9.70\times10^3\unit{cm^{-3}}$$
+
+### (d)
+$p_0>n_0$, holes.
+
+### (e)
+$$n_i=\sqrt{p_0n_0}=\sqrt{5\times10^{15}\unit{cm^{-3}}\cdot9.70\times10^3\unit{cm^{-3}}}=6.96\times10^9\unit{cm^{-3}}$$
+$$E_{Fi}-E_F=kT\ln\frac{p_0}{n_i}=0.0259\unit{eV}\cdot\ln\frac{5\times10^{15}\unit{cm^{-3}}}{6.96\times10^9\unit{cm^{-3}}}=3.49\times10^{-1}\unit{eV}$$
+
+## Ex 2.10
+### (a)
+$$p_0=N_v\exp\left[\frac{-(E_F-E_v)}{kT}\right]=1.04\times10^{19}\unit{cm^{-3}}\exp\left[\frac{-0.25\unit{eV}}{0.0259\unit{eV}}\right]=6.68\times10^{14}\unit{cm^{-3}}$$
+$$E_c-E_F=E_g-(E_F-E_v)=1.12\unit{eV}-0.25\unit{eV}=0.87\unit{eV}$$
+$$n_0=N_c\exp\left[\frac{-(E_c-E_F)}{kT}\right]=2.8\times10^{19}\unit{cm^{-3}}\exp\left[\frac{-0.87\unit{eV}}{0.0259\unit{eV}}\right]=7.23\times10^4\unit{cm^{-3}}$$
+
+### (b)
+$$N_v=1.04\times10^{19}\unit{cm^{-3}}\cdot\left(\frac{4}{3}\right)^{3/2}=1.60\times10^{19}\unit{cm^{-3}}$$
+$$E_F-E_v=kT\ln\frac{N_v}{p_0}=0.03448\unit{eV}\cdot\ln\frac{1.04\times10^{19}\unit{cm^{-3}}}{6.68\times10^{14}\unit{cm^{-3}}\unit{cm^3}}=3.48\times10^{-1}\unit{eV}$$
+$$E_c-E_F=E_g-(E_F-E_v)=1.12\unit{eV}-3.48\times10^{-1}\unit{eV}=7.72\times10^{-1}\unit{eV}$$
+$$N_c=2.8\times10^{19}\unit{cm^{-3}}\cdot\left(\frac{4}{3}\right)^{3/2}=4.31\times10^{19}\unit{cm^{-3}}$$
+$$n_0=N_c\exp\left[\frac{-(E_c-E_F)}{kT}\right]=4.31\times10^{19}\unit{cm^{-3}}\exp\left[\frac{-7.72\times10^{-1}\unit{eV}}{0.03448\unit{eV}}\right]=8.14\times10^9\unit{cm^{-3}}$$
+

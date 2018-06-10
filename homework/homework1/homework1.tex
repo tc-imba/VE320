@@ -1,0 +1,145 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{indentfirst}
+\usepackage{minted}
+\usemintedstyle{autumn}
+\setminted{linenos,breaklines,tabsize=4,xleftmargin=1.5em}
+\geometry{left=3.0cm,right=3.0cm,top=3.0cm,bottom=4.0cm}
+\renewcommand{\thesection}{Ex. \arabic{section}}
+\newcommand{\unit}[1]{{\rm\,#1}}
+\title{VE320 Homework 1}
+\author{Liu Yihao 515370910207}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{}
+$$E=hv=\frac{hc}{\lambda}\Longrightarrow\lambda=\frac{hc}{E}$$
+
+For gold,
+$$\lambda=\frac{hc}{E}=\frac{6.63\times10^{-34}\unit{J\cdot s}\cdot3\times10^8\unit{m/s}}{4.90\unit{eV}}=2.54\times10^{-7}\unit{m}$$
+
+For Cesium,
+$$\lambda=\frac{hc}{E}=\frac{6.63\times10^{-34}\unit{J\cdot s}\cdot3\times10^8\unit{m/s}}{1.90\unit{eV}}=6.54\times10^{-7}\unit{m}$$
+
+\section{}
+$$E_{avg}=\frac{3}{2}kT=1.5\cdot 0.0259\unit{eV}=3.885\times10^{-2}\unit{eV}$$
+$$p_{avg}=\sqrt{2mE_{avg}}=\sqrt{2\cdot9.11\times10^{-31}\unit{kg}\cdot3.885\times10^{-2}\unit{eV}}=1.064\times10^{-25}\unit{kg\cdot m/s}$$
+$$\lambda=\frac{h}{p}=\frac{6.63\times10^{-34}}{1.064\times10^{-25}\unit{kg\cdot m/s}}=6.23\times10^{-9}\unit{m}=62.3\unit{\mathring{A}}$$
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$p=\frac{h}{\lambda}=\frac{6.63\times10^{-34}\unit{J\cdot s}}{8.5\times10^{-9}\unit{m}}=7.80\times10^{-26}\unit{kg\cdot m/s}$$
+$$v=\frac{p}{m}=\frac{7.80\times10^{-26}\unit{kg\cdot m/s}}{9.11\times10^{-31}\unit{kg}}=8.56\times10^4\unit{m/s}$$
+$$E=\frac{1}{2}mv^2=\frac{1}{2}\cdot9.11\times10^{-31}\unit{kg}\cdot(8.56\times10^4\unit{m/s})^2=3.34\times10^{-21}\unit{J}=2.09\times10^{-2}\unit{eV}$$
+\item
+$$v=8\times10^5\unit{cm/s}=8\times10^2\unit{m/s}$$
+$$E=\frac{1}{2}mv^2=\frac{1}{2}\cdot9.11\times10^{-31}\unit{kg}\cdot(8\times10^2\unit{m/s})^2=2.92\times10^{-25}\unit{J}=1.83\times10^{-4}\unit{eV}$$
+$$p=mv=9.11\times10^{-31}\unit{kg}\cdot8\times10^2\unit{m/s}=7.29\times10^{-27}\unit{kg\cdot m/s}$$
+$$\lambda=\frac{h}{p}=\frac{6.63\times10^{-34}\unit{J\cdot s}}{7.29\times10^{-27}\unit{kg\cdot m/s}}=9.09\times10^{-8}\unit{m}=909\unit{\mathring{A}}$$
+\end{enumerate}
+
+\section{}
+$$\int_{-1}^{+3}|\Phi(x,t)|^2dx=\int_{-1}^{+3}A^2\cos^2\left(\frac{\pi x}{2}\right)dx=A^2\cdot\left(\frac{x}{2}+\frac{\sin(\pi x)}{2\pi}\right)\bigg|_{-1}^{+3}=2A^2=1$$
+$$A=\pm\frac{\sqrt{2}}{2}$$
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+\begin{enumerate}[(i)]
+\item
+$$v_p=\frac{\omega}{k}=\frac{8\times10^{12}\unit{rad/s}}{8\times10^8\unit{m^{-1}}}=10^4\unit{m/s}$$
+$$\lambda=\frac{2\pi}{k}=\frac{2\cdot3.14}{8\times10^8\unit{m^{-1}}}=7.85\times10^{-9}\unit{m}=78.5\unit{\mathring{A}}$$
+\item
+$$p=\hbar k=1.05\times10^{-34}\unit{J\cdot s}\cdot8\times10^8\unit{m^{-1}}=8.40\times10^{-26}\unit{kg\cdot m/s}$$
+$$v=\frac{p}{m}=\frac{8.40\times10^{-26}\unit{kg\cdot m/s}}{9.11\times10^{-31}\unit{kg}}=9.22\times10^4\unit{m/s}$$
+$$E=\frac{1}{2}mv^2=\frac{1}{2}\cdot9.11\times10^{-31}\unit{kg}\cdot(9.22\times10^4\unit{m/s})^2=3.87\times10^{-21}\unit{J}$$
+\end{enumerate}
+\item
+\begin{enumerate}[(i)]
+\item
+$$v_p=\frac{\omega}{k}=\frac{1.5\times10^{12}\unit{rad/s}}{-1.5\times10^9\unit{m^{-1}}}=-10^4\unit{m/s}$$
+$$\lambda=\frac{2\pi}{|k|}=\frac{2\cdot3.14}{1.5\times10^9\unit{m^{-1}}}=4.19\times10^{-9}\unit{m}=41.9\unit{\mathring{A}}$$
+\item
+$$p=\hbar |k|=1.05\times10^{-34}\unit{J\cdot s}\cdot1.5\times10^9\unit{m^{-1}}=1.58\times10^{-25}\unit{kg\cdot m/s}$$
+$$v=\frac{p}{m}=\frac{1.58\times10^{-25}\unit{kg\cdot m/s}}{9.11\times10^{-31}\unit{kg}}=1.73\times10^5\unit{m/s}$$
+$$E=\frac{1}{2}mv^2=\frac{1}{2}\cdot9.11\times10^{-31}\unit{kg}\cdot(1.73\times10^5\unit{m/s})^2=1.36\times10^{-20}\unit{J}$$
+\end{enumerate}
+\end{enumerate}
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$E_n=\frac{\hbar^2n^2\pi^2}{2ma^2}=\frac{h^2n^2}{8ma^2}=n^2\cdot\frac{(6.63\times10^{-43}\unit{J\cdot s})}{8\cdot9.11\times10^{-31}\unit{kg}\cdot(10^{-9}\unit{m})^2}=n^2\cdot6.03\times10^{-20}\unit{J}=0.377n^2\unit{eV}$$
+$$E_1=0.377\unit{eV}$$
+$$E_2=1.508\unit{eV}$$
+$$E_3=3.393\unit{eV}$$
+\item
+$$\Delta E=5\cdot6.03\times10^{-20}\unit{J}=3.015\times10^{-19}\unit{J}$$
+$$\lambda=\frac{hc}{\Delta E}=\frac{6.63\times10^{-34}\unit{J\cdot s}\cdot3\times10^8\unit{m/s}}{3.015\times10^{-19}\unit{J}}=6.60\times10^{-7}\unit{m}$$
+\end{enumerate}
+
+\section{}
+$$\psi_1(x)=A_1e^{jk_1x}+B_1e^{-jk_1x}$$
+$$\psi_2(x)=A_2e^{jk_2x}+B_2e^{-jk_2x}$$
+$$\psi_3(x)=A_3e^{jk_3x}$$
+
+At $x=0$, the function must be continuous, so $\psi_1(0)=\psi_2(0)$, $\dfrac{\partial\psi_1}{\partial x}(0)=\dfrac{\partial\psi_2}{\partial x}(0)$,
+$$A_1+B_1=A_2+B_2$$
+$$k_1A_1-k_1B_1=k_2A_2-k_2B_2$$
+
+At $x=a$, the function must be continuous, so $\psi_2(a)=\psi_3(a)$, $\dfrac{\partial\psi_2}{\partial x}(a)=\dfrac{\partial\psi_3}{\partial x}(a)$,
+$$A_2e^{jk_2a}+B_2e^{-jk_2a}=A_3e^{jk_3a}$$
+$$k_2A_2e^{jk_2a}-k_2B_2e^{-jk_2a}=k_3A_3e^{jk_3a}$$
+
+Since $k_2a=2n\pi$, so $e^{jk_2a}=e^{-jk_2a}=1$, we get
+$$A_2+B_2=A_3e^{jk_3a}$$
+$$k_2A_2-k_2B_2=k_3A_3e^{jk_3a}$$
+
+Use the equations, we can get
+$$A_1+B_1=A_3e^{jk_3a}$$
+$$A_1-B_1=\frac{k_3}{k_1}A_3e^{jk_3a}$$
+$$2A_1=\frac{k_3+k_1}{k_1}A_3e^{jk_3a}$$
+$$\frac{A_3\cdot A_3^*}{A_1\cdot A_1^*}=\frac{4k_1^2}{(k_1+k_3)^2}$$
+
+So the transmission coefficient is
+$$T=\frac{v_t\cdot A_3\cdot A_3^*}{v_i\cdot A_1\cdot A_1^*}=\frac{k_3\cdot A_3\cdot A_3^*}{k_1\cdot A_1\cdot A_1^*}=\frac{4k_1k_3}{(k_1+k_3)^2}$$
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+For Region I,
+$$\frac{\partial^2\psi_1(x)}{\partial x^2}-\frac{2m(V_0-E)}{\hbar^2}\psi_1(x)=0$$
+$$\psi_1(x)=A_1e^{k_1x},k_1=\sqrt{\frac{2m(V_0-E)}{\hbar^2}}$$
+For Region II,
+$$\frac{\partial^2\psi_2(x)}{\partial x^2}+\frac{2mE}{\hbar^2}\psi_2(x)=0$$
+$$\psi_2(x)=A_2\sin(k_2x)+B_2\cos(k_2x),k_2=\sqrt{\frac{2mE}{\hbar^2}}$$
+For Region III,
+$$\psi_3(x)=0$$
+\item
+At $x=0$, the function must be continuous, so $\psi_1(0)=\psi_2(0)$, $\dfrac{\partial\psi_1}{\partial x}(0)=\dfrac{\partial\psi_2}{\partial x}(0)$,
+$$A_1=B_2$$
+$$k_1A_1=k_2A_2$$
+which means
+$$\frac{A_1}{A_2}=\frac{k_2}{k_1}$$
+At $x=a$, the function must be continuous, so $\psi_2(a)=\psi_3(a)$, $\dfrac{\partial\psi_2}{\partial x}(a)=\dfrac{\partial\psi_3}{\partial x}(a)$,
+$$A_2\sin(k_2a)+B_2\cos(k_2a)=0$$
+$$A_2\cos(k_2a)-B_2\sin(k_2a)=0$$
+which means
+$$\frac{B_2}{A_2}=-\tan(k_2a)$$
+\item
+$$\frac{A_1}{A_2}=\frac{k_2}{k_1}=-\tan(k_2a)$$
+$$\sqrt{\frac{2mE}{2m(V_0-E)}}=-\tan\left(\sqrt{\frac{2mE}{\hbar^2}}\right)$$
+This equation can be solved so that we can find the exact values of $E$, so the energy levels of the electrons are quantized.
+\end{enumerate}
+
+
+\end{document}
