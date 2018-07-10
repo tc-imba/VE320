@@ -1,0 +1,36 @@
+---
+title: "VE320 Homework5"
+author: "Liu Yihao 515370910207"
+date: "2018-07-11"
+output: 
+  pdf_document:
+    includes:
+      in_header: header.tex
+    latex_engine: xelatex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(latex2exp)
+```
+
+## Ex 5.1
+
+### (a)
+n-side:
+$$E_F-E_{Fi}=kT\ln\frac{N_d}{n_i}=0.0259\unit{eV}\ln\frac{5\times10^{15}\unit{cm^{-3}}}{1.5\times10^{10}\unit{cm^{-3}}}=3.294\times10^{-1}\unit{eV}$$
+p-side:
+$$E_{Fi}-E_F=kT\ln\frac{N_a}{n_i}=0.0259\unit{eV}\ln\frac{10^{17}\unit{cm^{-3}}}{1.5\times10^{10}\unit{cm^{-3}}}=4.070\times10^{-1}\unit{eV}$$
+
+### (b)
+$$V_{bi}=3.294\times10^{-1}\unit{eV}+4.070\times10^{-1}\unit{eV}=7.364\times10^{-1}\unit{eV}$$
+
+### (c)
+$$V_{bi}=kT\ln\frac{N_aN_d}{n_i^2}=0.0259\unit{eV}\ln\frac{10^{17}\unit{cm^{-3}}\cdot5\times10^{15}\unit{cm^{-3}}}{(1.5\times10^{10}\unit{cm^{-3}})^2}=7.363\times10^{-1}\unit{eV}$$
+It is same as the results in (b).
+
+### (d)
+$$x_n=\sqrt{\frac{2\epsilon_sV_{bi}}{e}\cdot\frac{N_a}{N_d}\cdot\frac{1}{N_a+N_d}}=$$
+
+
+
