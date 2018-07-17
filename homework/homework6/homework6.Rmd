@@ -57,19 +57,75 @@ $$I=I_s\exp\frac{V_a}{V_t}=1.029\times10^{-14}\unit{A}\exp\frac{0.55\unit{V}}{0.
 $$I=I_s\exp\frac{V_a}{V_t}=1.029\times10^{-14}\unit{A}\exp\frac{0.65\unit{V}}{0.0259\unit{V}}=8.160\times10^{-4}\unit{A}$$
 
 ## Ex 6.3
-
+```{r ex6.3}
+func <- function(Na) {
+  Jn <- 1 / Na * sqrt(25 / 1e-6)
+  Jp <- 1 / 1e16 * sqrt(10 / 1e-7)
+  return(Jp / (Jn + Jp))
+}
+curve(func, from = 1e15, to = 1e18, xlab = TeX('Na (cm^{-3})'), ylab = 'ratio', log = 'x')
+```
 
 ## Ex 6.4
 $$\frac{I_f}{I_s}=\exp\frac{V_a}{V_t}$$
 
 $$V_t=\frac{V_a}{\ln(I_f/I_s)}=\frac{0.5\unit{V}}{\ln 2\time10^4}=5.049\times10^{-2}\unit{V}$$
 $$T=\frac{300V_T}{0.0259}=5.848\times10^{2}\unit{K}$$
+$$\tau_{n0}=\tau_{p0}=5\times10^{-7}\unit{s}$$
+$$I_s=Aen_i^2\left(\frac{1}{N_a}\sqrt{\frac{D_n}{\tau_{n0}}}+\frac{1}{N_d}\sqrt{\frac{D_p}{\tau_{p0}}}\right)$$
+$$1.2\times10^{-6}=1.432\times10^{-34} n_i^2$$
+$$n_i^2=N_cN_v\exp\frac{-E_g}{kT}$$
+$$n_i^2=8.379\times10^{27}=2.8\times10^{19}\cdot1.04\times10^{19}\cdot\left(\frac{T}{300}\right)^3\cdot\exp\frac{-1.12}{0.0259\cdot T/300}$$
+$$T\approx502.46\unit{K}$$
+So the maximum temperature is $502.46\unit{K}$, $J_s$ is the limiting factor.
+
+## Ex 6.5
+
+## Ex 6.6
+
+## Ex 6.7
+
+## Ex 6.8
+
+### (a)
+$$n_{E0}=\frac{n_i^2}{N_E}=\frac{(1.5\times10^{10}\unit{cm^{-3}})^2}{5\times10^{17}\unit{cm^{-3}}}=4.5\times10^2\unit{cm^{-3}}$$
+$$p_{B0}=\frac{n_i^2}{N_B}=\frac{(1.5\times10^{10}\unit{cm^{-3}})^2}{10^{16}\unit{cm^{-3}}}=2.25\times10^4\unit{cm^{-3}}$$
+$$n_{C0}=\frac{n_i^2}{N_C}=\frac{(1.5\times10^{10}\unit{cm^{-3}})^2}{10^{15}\unit{cm^{-3}}}=2.25\times10^5\unit{cm^{-3}}$$
+
+### (b)
+$$p_B(0)=p_{B0}\exp\frac{V_{EB}}{V_t}=2.25\times10^4\unit{cm^{-3}}\exp\frac{0.615\unit{V}}{0.0259\unit{V}}=4.619\times10^{14}\unit{cm^{-3}}$$
+$$n_E(0)=n_{E0}\exp\frac{V_{EB}}{V_t}=4.5\times10^2\unit{cm^{-3}}\exp\frac{0.615\unit{V}}{0.0259\unit{V}}=9.239\times10^{12}\unit{cm^{-3}}$$
+
+### (c)
 
 
+## Ex 6.9
 
+$$i_C=\frac{-eD_nA_{BE}}{x_B}\cdot n_{B0}\exp\frac{v_{BE}}{V_t}$$
+$$A_{BE}=\frac{|i_C|x_B}{eD_nn_{B0}\exp\frac{v_{BE}}{V_t}}=9.877\times10^{-2}\cdot|i_C|$$
 
+### (a)
+$$A_{BE}=9.877\times10^{-2}\cdot2\times10^{-3}=1.975\times10^{-4}\unit{cm^2}$$
 
+### (b)
+$$A_{BE}=9.877\times10^{-2}\cdot5\times10^{-3}=4.939\times10^{-4}\unit{cm^2}$$
 
+## Ex 6.10
+
+### (a)
+$$\gamma=\frac{1}{1+\frac{N_B}{N_E}\cdot\frac{D_E}{D_B}\cdot\frac{x_B}{x_E}}$$
+$$k=\frac{N_{B0}}{N_E}\cdot\frac{D_E}{D_B}\cdot\frac{x_{B0}}{x_E}$$
+$$\gamma_A=\frac{1}{1+k}$$
+$$\gamma_B=\frac{1}{1+2k}$$
+$$\gamma_C=\frac{1}{1+k/2}$$
+
+#### (i)
+$$\frac{\gamma_B}{\gamma_A}=\frac{1+k}{1+2k}$$
+
+#### (i)
+$$\frac{\gamma_C}{\gamma_A}=\frac{1+k}{1+k/2}$$
+
+### (b)
 
 
 
