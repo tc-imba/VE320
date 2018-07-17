@@ -1,0 +1,79 @@
+---
+title: "VE320 Homework6"
+author: "Liu Yihao 515370910207"
+date: "2018-07-20"
+output: 
+  pdf_document:
+    includes:
+      in_header: header.tex
+    latex_engine: xelatex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(latex2exp)
+```
+
+## Ex 6.1
+
+### (a)
+
+#### (i)
+$$n_{p0}=\frac{n_i^2}{N_a}=\frac{(1.5\times10^{10}\unit{cm^{-3}})^2}{5\times10^{16}\unit{cm^{-3}}}=4.5\times10^3\unit{cm^{-3}}$$
+$$p_{n0}=\frac{n_i^2}{N_d}=\frac{(1.5\times10^{10}\unit{cm^{-3}})^2}{5\times10^{15}\unit{cm^{-3}}}=4.5\times10^4\unit{cm^{-3}}$$
+$$p_n(x_n)=p_{n0}\exp\frac{V_a}{V_t}$$
+$$V_a=V_t\ln\frac{p_n(x_n)}{p_{n0}}=V_t\ln\frac{0.1N_d}{p_{n0}}=0.599\unit{V}$$
+
+#### (ii)
+$n_{p0}<p_{n0}$, so n-region concentration is the factor.
+
+### (b)
+
+#### (i)
+$$n_{p0}=\frac{n_i^2}{N_a}=\frac{(1.5\times10^{10}\unit{cm^{-3}})^2}{7\times10^{15}\unit{cm^{-3}}}=3.214\times10^4\unit{cm^{-3}}$$
+$$p_{n0}=\frac{n_i^2}{N_d}=\frac{(1.5\times10^{10}\unit{cm^{-3}})^2}{3\times10^{16}\unit{cm^{-3}}}=7.5\times10^3\unit{cm^{-3}}$$
+$$n_p(-x_p)=n_{p0}\exp\frac{V_a}{V_t}$$
+$$V_a=V_t\ln\frac{n_p(-x_p)}{n_{p0}}=V_t\ln\frac{0.1N_a}{n_{p0}}=0.617\unit{V}$$
+
+#### (ii)
+$n_{p0}>p_{n0}$, po n-region concentration is the factor.
+
+## Ex 6.2
+
+### (a)
+
+$$J_s=en_i^2\left(\frac{1}{N_a}\sqrt{\frac{D_n}{\tau_{n0}}}+\frac{1}{N_d}\sqrt{\frac{D_p}{\tau_{p0}}}\right)=5.145\times10^{-11}\unit{A/cm^2}$$
+$$I_s=AJ_s=2\times10^{-4}\unit{cm^2}\cdot5.145\times10^{-11}\unit{A/cm^2}=1.029\times10^{-14}\unit{A}$$
+
+### (b)
+
+#### (i)
+$$I=I_s\exp\frac{V_a}{V_t}=1.029\times10^{-14}\unit{A}\exp\frac{0.45\unit{V}}{0.0259\unit{V}}=3.615\times10^{-7}\unit{A}$$
+
+#### (ii)
+$$I=I_s\exp\frac{V_a}{V_t}=1.029\times10^{-14}\unit{A}\exp\frac{0.55\unit{V}}{0.0259\unit{V}}=1.717\times10^{-5}\unit{A}$$
+
+#### (iii)
+$$I=I_s\exp\frac{V_a}{V_t}=1.029\times10^{-14}\unit{A}\exp\frac{0.65\unit{V}}{0.0259\unit{V}}=8.160\times10^{-4}\unit{A}$$
+
+## Ex 6.3
+
+
+## Ex 6.4
+$$\frac{I_f}{I_s}=\exp\frac{V_a}{V_t}$$
+
+$$V_t=\frac{V_a}{\ln(I_f/I_s)}=\frac{0.5\unit{V}}{\ln 2\time10^4}=5.049\times10^{-2}\unit{V}$$
+$$T=\frac{300V_T}{0.0259}=5.848\times10^{2}\unit{K}$$
+
+
+
+
+
+
+
+
+
+
+
+
+
