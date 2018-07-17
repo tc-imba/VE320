@@ -1,0 +1,183 @@
+---
+title: "VE320 Homework4"
+author: "Liu Yihao 515370910207"
+date: "2018-06-22"
+output: 
+  pdf_document:
+    includes:
+      in_header: header.tex
+    latex_engine: xelatex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(latex2exp)
+```
+
+## Ex 4.1
+In steady state,
+$$\frac{\partial p}{\partial t}=-\frac{\partial F_p^+}{\partial x}+g_p-\frac{p}{\tau_{pt}}=0$$
+$$\frac{\partial F_p^+}{\partial x}=g_p-R_p=10^{20}\unit{cm^{-3}\cdot s^{-1}}-2\times10^{19}\unit{cm^{-3}\cdot s^{-1}}=8\times10^{19}\unit{cm^{-3}\cdot s^{-1}}$$
+When $g_p=0$,
+$$\frac{\partial F_p^+}{\partial x}=0-R_p=-2\times10^{19}\unit{cm^{-3}\cdot s^{-1}}$$
+
+## Ex 4.2
+
+### (a)
+$$p_0=N_a=7\times10^{15}\unit{cm^{-3}}$$
+$$\mu'=\mu_n\approx1250\unit{cm^2/(V\cdot s)}$$
+
+### (b)
+$$D'=D_n=\frac{kT}{e}\mu_n=0.0259\unit{eV}\cdot1250\unit{cm^2/(V\cdot s)}=32.375\unit{cm^2/s}$$
+
+### (c)
+$$\tau_{nt}=\tau_{n0}=10^{-7}\unit{s}$$
+$$n_0=\frac{n_i^2}{p_0}=\frac{(1.5\times10^{10}\unit{cm^{-3}})^2}{7\times10^{15}\unit{cm^{-3}}}=3.21\times10^{4}\unit{cm^{-3}}$$
+$$\tau_{pt}=\frac{p_0\tau_{nt}}{n_0}=\frac{7\times10^{15}\unit{cm^{-3}}\cdot10^{-7}\unit{s}}{3.21\times10^{4}\unit{cm^{-3}}}=2.18\times10^{4}\unit{s}$$
+
+## Ex 4.3
+### (a)
+$$p_0=N_a=10^{16}\unit{cm^{-3}}$$
+$$n_0=\frac{n_i^2}{p_0}=\frac{(1.5\times10^{10}\unit{cm^{-3}})^2}{10^{16}\unit{cm^{-3}}}=2.25\times10^{4}\unit{cm^{-3}}$$
+$$\delta_n=\delta_p=g'\tau_{n0}(1-e^{-t/\tau_{n0}})=8\times10^{20}\unit{cm^{-3}\cdot s^{-1}}\cdot5\times10^{-7}\unit{s}=4\times10^{14}(1-e^{-t/\tau_{n0}})\unit{cm^{-3}}$$
+$$\sigma(t)=e\mu_n(n_0+\delta n)+e\mu_p(p_0+\delta p)=e\mu_pp_0+e(\mu_n+\mu_p)\delta_n=0.608+8.192\times10^{-2}(1-e^{-t/\tau_{n0}})\unit{(\Omega\cdot cm})^{-1}$$
+
+### (b)
+$$\sigma(0)=0.608\unit{(\Omega\cdot cm})^{-1}$$
+$$\sigma(\infty)=0.608+8.192\times10^{-2}=0.690\unit{(\Omega\cdot cm)^{-1}}$$
+
+## Ex 4.4
+$$N=N_a+N_d=8\times10^{15}+2\times10^{15}=10^{16}\unit{cm^{-3}}$$
+$$n_0=N_a-N_d=8\times10^{15}-2\times10^{15}=6\times10^{15}\unit{cm^{-3}}$$
+$$\mu_n\approx1300\unit{cm^2/(V\cdot s)}$$
+$$\mu_p\approx400\unit{cm^2/(V\cdot s)}$$
+$$\delta_n=\delta_p=g'\tau_{n0}(1-e^{-t/\tau_{n0}})=8\times10^{20}\unit{cm^{-3}\cdot s^{-1}}\cdot5\times10^{-7}\unit{s}=4\times10^{14}(1-e^{-t/\tau_{n0}})\unit{cm^{-3}}$$
+$$\sigma=e\mu_n(n_0+\delta n)+e\mu_p(p_0+\delta p)=e\mu_nn_0+e(\mu_n+\mu_p)\delta_n=1.248+0.1088(1-e^{-t/\tau_{n0}})\unit{(\Omega\cdot cm)^{-1}}$$
+$$I=\frac{\sigma AV}{L}=\sigma\cdot\frac{10^{-5}\unit{cm^2}\cdot10\unit{V}}{0.05\unit{cm}}=2.496\times10^{-3}+2.176\times10^{-4}\unit{A}$$
+
+## Ex 4.5
+
+### (a)
+$$\delta_n=\delta_p=g'\tau_{n0}$$
+$$\tau_{n0}=\frac{\delta_n}{g'}=\frac{5\times10^{14}\unit{cm^{-3}}}{2\times10^{21}\unit{cm^{-3}\cdot s^{-1}}}=2.5\times10^{-7}\unit{s}$$
+
+### (b)
+$$\delta_n=\delta_p=g'\tau_{n0}(1-e^{-t/\tau_{n0}})=5\times10^{14}(1-e^{-t/\tau_{n0}})\unit{cm^{-3}}$$
+$$R'=\frac{\delta_n}{\tau_{n0}}=g'(1-e^{-t/\tau_{n0}})=2\times10^{21}(1-e^{-t/\tau_{n0}})\unit{cm^{-3}\cdot s^{-1}}$$
+
+### (c)
+
+#### (i)
+$$1-e^{-t/\tau_{n0}}=\frac{1}{4}$$
+$$t=-\tau_{n0}\ln\frac{3}{4}=7.192\times10^{-8}\unit{s}$$
+
+#### (ii)
+$$1-e^{-t/\tau_{n0}}=\frac{1}{2}$$
+$$t=-\tau_{n0}\ln\frac{1}{2}=1.733\times10^{-7}\unit{s}$$
+
+#### (iii)
+$$1-e^{-t/\tau_{n0}}=\frac{3}{4}$$
+$$t=-\tau_{n0}\ln\frac{1}{4}=3.466\times10^{-7}\unit{s}$$
+
+#### (iv)
+$$1-e^{-t/\tau_{n0}}=\frac{19}{20}$$
+$$t=-\tau_{n0}\ln\frac{1}{20}=7.489\times10^{-7}\unit{s}$$
+
+## Ex 4.6
+
+###(a)
+For $t\in[0,2\times10^{-6})\unit{s}$, 
+$$\delta_n=g'\tau_{n0}e^{-t/\tau_{n0}}=5\times10^{14}e^{-t/\tau_{n0}}\unit{cm^{-3}}$$
+For $t=2\times10^{-6}\unit{s}$,
+$$\delta_n=5\times10^{14}e^{-t/\tau_{n0}}\unit{cm^{-3}}=9.158\times10^{12}\unit{cm^{-3}}$$
+For $t\in(2\times10^{-6},\infty)\unit{s}$,
+$$\delta_n=(5\times10^{14}-9.158\times10^{12})(1-e^{-t/\tau_{n0}})+9.158\times10^{12}=4.909(1-e^{-t/\tau_{n0}})+9.158\times10^{12}\unit{cm^{-3}}$$
+
+### (b)
+
+#### (i)
+$$\delta_n(0)=5\times10^{14}\unit{cm^{-3}}$$
+
+#### (ii)
+$$\delta_n(2\times10^{-6})=9.158\times10^{12}\unit{cm^{-3}}$$
+
+#### (i)
+$$\delta_n(\infty)=5\times10^{14}\unit{cm^{-3}}$$
+
+## Ex 4.7
+
+### (a)
+$$p_{p0}=10^{14}\unit{cm^{-3}}$$
+$$n_{p0}=\frac{n_i^2}{p_{p0}}=\frac{(1.5\times10^{10}\unit{cm^{-3}})^2}{10^{14}\unit{cm^{-3}}}=2.25\times10^{6}\unit{cm^{-3}}$$
+
+### (b)
+$$\delta_n(0)=n_p-n_{p0}=0-2.25\times10^{6}\unit{cm^{-3}}=-2.25\times10^{6}\unit{cm^{-3}}$$
+
+### (c)
+$$D_n\frac{d^2\delta_n}{dx^2}-\frac{\delta_n}{\tau_{n0}}=0$$
+$$\frac{d^2\delta_n}{dx^2}-\frac{\delta_n}{D_n\tau_{n0}}=0$$
+$$\delta_n=A\exp\left[\frac{-x}{\sqrt{D_n\tau_{n0}}}\right]+B\exp\left[\frac{x}{\sqrt{D_n\tau_{n0}}}\right]$$
+When $x\to\infty$, we can find that $\delta_n<\infty$, so $B=0$.
+$$\delta_n=-n_{p0}\exp\left[\frac{-x}{\sqrt{D_n\tau_{n0}}}\right]$$
+
+## Ex 4.8
+$$D_n\frac{\partial^2\delta_n}{\partial x^2}+\mu_nE\frac{\partial\delta_n}{\partial x}+g'-\frac{\delta_n}{\tau_{n0}}=\frac{\partial\delta_n}{\partial t}$$
+Since the semiconductor is uniformly illuminated,
+$$\frac{\partial^2\delta_n}{\partial x^2}=0,\frac{\partial\delta_n}{\partial x}=0$$
+And since $\tau_{n0}\to\infty$, we can get
+$$g'=\frac{\partial\delta_n}{\partial t}$$
+$$\delta_n=g't+C$$
+When $t<0$, $\delta_n=0$, and $g't=0$, so $C=0$.
+So when $t\in(o,T]$, $\delta_n=g't$; when $t>T$, $\delta_n=g'T$.
+
+## Ex 4.9
+
+### (a)
+$$D_p\frac{\partial^2\delta_p}{\partial x^2}+g'-\frac{\delta_p}{\tau_{p0}}=0$$
+$$\delta_p=g'\tau_{p0}+A\exp\left[\frac{-x}{\sqrt{D_p\tau_{p0}}}\right]+B\exp\left[\frac{x}{\sqrt{D_p\tau_{p0}}}\right]$$
+When $x\to\infty$, $\delta_p=g'\tau_{p0}<\infty$, so $B=0$.
+$$\delta_p=g'\tau_{p0}+A\exp\left[\frac{-x}{\sqrt{D_p\tau_{p0}}}\right]$$
+$$\frac{\partial\delta_p}{\partial x}=-\frac{A}{\sqrt{D_p\tau_{p0}}}=s(g'\tau_{p0}+A)$$
+$$A=-\frac{sg'\tau_{p0}}{D_p/\sqrt{D_p\tau_{p0}}+s}$$
+$$\delta_p(s,x)=g'\tau_{p0}+A\exp\left[\frac{-x}{\sqrt{D_p\tau_{p0}}}\right]=g'\tau_{p0}\left(1-\frac{s}{D_p/\sqrt{D_p\tau_{p0}}+s}\exp\left[\frac{-x}{\sqrt{D_p\tau_{p0}}}\right]\right)$$
+
+#### (i)
+$$\delta_p(0,x)=g'\tau_{p0}\unit{cm^{-3}}$$
+
+#### (ii)
+$$\delta_p(2000,x)=g'\tau_{p0}\left(1-0.167\exp\left[\frac{-x}{\sqrt{D_p\tau_{p0}}}\right]\right)\unit{cm^{-3}}$$
+
+#### (ii)
+$$\delta_p(\infty,x)=g'\tau_{p0}\left(1-\exp\left[\frac{-x}{\sqrt{D_p\tau_{p0}}}\right]\unit{cm^{-3}}\right)$$
+
+### (b)
+
+#### (i)
+$$\delta_p(0,0)=g'\tau_{p0}=10^{14}\unit{cm^{-3}}$$
+
+#### (ii)
+$$\delta_p(2000,0)=g'\tau_{p0}\left(1-0.167\right)=8.33\times10^{13}\unit{cm^{-3}}$$
+
+#### (iii)
+$$\delta_p(\infty,0)=0$$
+
+## Ex 4.10
+
+### (a)
+$$D_n\frac{\partial^2\delta_n}{\partial x^2}-\frac{\delta_n}{\tau_{n0}}=0$$
+$$\delta_n=A\exp\left[\frac{-x}{\sqrt{D_n\tau_{n0}}}\right]+B\exp\left[\frac{x}{\sqrt{D_n\tau_{n0}}}\right]$$
+When $x=0$, $\delta_n(0)=A+B$.
+When $x=W$, $\delta_n(W)=0$,
+$$A\exp\left[\frac{-W}{\sqrt{D_n\tau_{n0}}}\right]+B\exp\left[\frac{W}{\sqrt{D_n\tau_{n0}}}\right]=0$$
+$$A=\frac{-\delta_n(0)\exp\left[\frac{2W}{\sqrt{D_n\tau_{n0}}}\right]}{1-\exp\left[\frac{2W}{\sqrt{D_n\tau_{n0}}}\right]}, B=\frac{\delta_n(0)}{1-\exp\left[\frac{2W}{\sqrt{D_n\tau_{n0}}}\right]}$$
+$$\delta_n=\delta_n(0)\cdot\frac{\exp\left[\frac{W-x}{\sqrt{D_n\tau_{n0}}}\right]-\exp\left[\frac{-(W-x)}{\sqrt{D_n\tau_{n0}}}\right]}{\exp\left[\frac{W}{\sqrt{D_n\tau_{n0}}}\right]-\exp\left[\frac{-W}{\sqrt{D_n\tau_{n0}}}\right]}$$
+$$\delta_n(0)=10^{15}\unit{cm^{-3}},\sqrt{D_n\tau_{n0}}=3.536\unit10^{-5}\unit{m}$$
+
+## (b)
+$$\frac{\partial^2\delta_n}{\partial x^2}=0$$
+$$\delta_n=kx+b$$
+$$\delta_n(0)=b$$
+$$\delta_n(W)=Wx+b=0$$
+$$\delta_n=-\frac{\delta_n(0)}{W}x+\delta_n(0)$$
+
+
