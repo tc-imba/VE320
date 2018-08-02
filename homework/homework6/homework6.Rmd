@@ -81,9 +81,61 @@ So the maximum temperature is $502.46\unit{K}$, $J_s$ is the limiting factor.
 
 ## Ex 6.5
 
+### (a)
+$$I_D=Cn_i^2\exp\frac{eV_a}{kT}=C\exp\frac{-E_g+eV_a}{kT}$$
+$$-E_g+eV_a=kT\ln\frac{I_D}{C}$$
+$$V_a=\frac{E_g}{e}+\frac{kT}{e}\ln\frac{I_D}{C}$$
+
+### (b)
+```{r ex6.5.b}
+func <- function(t) {
+  Eg <- 1.12
+  k <- 1.3806e-23
+  e <- 1.6e-19
+  ID <- 1e-4
+  return(Eg + k * t / e * log(ID))
+}
+curve(func, from = 20+273, to = 200+273, xlab = TeX('T (K)'), ylab = TeX('V_a (V)'))
+```
+
+### (c)
+```{r ex6.5.c}
+func <- function(t) {
+  Eg <- 1.12
+  k <- 1.3806e-23
+  e <- 1.6e-19
+  ID <- 1e-3
+  return(Eg + k * t / e * log(ID))
+}
+curve(func, from = 20+273, to = 200+273, xlab = TeX('T (K)'), ylab = TeX('V_a (V)'))
+```
+
+### (d)
+When $T$ becomes larger, $E_g$ of silicon becomes smaller, so the result will not be a straight line, the curve will be below the origin line.
+
 ## Ex 6.6
 
+### (a)
+\vspace{3em}
+
+### (b)
+\vspace{3em}
+
+### (c)
+\vspace{7em}
+
 ## Ex 6.7
+### (a)
+\vspace{3em}
+
+### (b)
+\vspace{3em}
+
+### (c)
+\vspace{3em}
+
+### (d)
+\vspace{3em}
 
 ## Ex 6.8
 
@@ -97,7 +149,7 @@ $$p_B(0)=p_{B0}\exp\frac{V_{EB}}{V_t}=2.25\times10^4\unit{cm^{-3}}\exp\frac{0.61
 $$n_E(0)=n_{E0}\exp\frac{V_{EB}}{V_t}=4.5\times10^2\unit{cm^{-3}}\exp\frac{0.615\unit{V}}{0.0259\unit{V}}=9.239\times10^{12}\unit{cm^{-3}}$$
 
 ### (c)
-
+\vspace{3em}
 
 ## Ex 6.9
 
@@ -113,7 +165,7 @@ $$A_{BE}=9.877\times10^{-2}\cdot5\times10^{-3}=4.939\times10^{-4}\unit{cm^2}$$
 ## Ex 6.10
 
 ### (a)
-$$\gamma=\frac{1}{1+\frac{N_B}{N_E}\cdot\frac{D_E}{D_B}\cdot\frac{x_B}{x_E}}$$
+$$\gamma=\frac{1}{1+\dfrac{N_B}{N_E}\cdot\dfrac{D_E}{D_B}\cdot\dfrac{x_B}{x_E}}$$
 $$k=\frac{N_{B0}}{N_E}\cdot\frac{D_E}{D_B}\cdot\frac{x_{B0}}{x_E}$$
 $$\gamma_A=\frac{1}{1+k}$$
 $$\gamma_B=\frac{1}{1+2k}$$
@@ -122,14 +174,42 @@ $$\gamma_C=\frac{1}{1+k/2}$$
 #### (i)
 $$\frac{\gamma_B}{\gamma_A}=\frac{1+k}{1+2k}$$
 
-#### (i)
+#### (ii)
 $$\frac{\gamma_C}{\gamma_A}=\frac{1+k}{1+k/2}$$
 
 ### (b)
+$$\alpha_T=\frac{1}{1+\dfrac{1}{2}\left(\dfrac{x_B}{L_B}\right)^2}$$
+
+$$m=\frac{1}{2}\left(\frac{x_{B0}}{L_B}\right)^2$$
+
+$$\alpha_{TA}=\frac{1}{1+m}$$
+$$\alpha_{TB}=\frac{1}{1+m}$$
+$$\alpha_{TC}=\frac{1}{1+m/4}$$
+
+#### (i)
+$$\frac{\alpha_{TB}}{\alpha_{TA}}=1$$
+
+#### (ii)
+$$\frac{\alpha_{TC}}{\alpha_{TA}}=\frac{1+m}{1+m/4}$$
+
+### (c)
+$$\delta=\frac{1}{1+\dfrac{J_{r0}}{J_{s0}}\exp\dfrac{-eV_{BE}}{2kT}}$$
+$$n=\dfrac{J_{r0}}{J_{s0}}\exp\dfrac{-eV_{BE}}{2kT}\propto N_B$$
+$$\delta_A=\frac{1}{1+n}$$
+$$\delta_B=\frac{1}{1+2n}$$
+$$\delta_C=\frac{1}{1+n}$$
+
+#### (i)
+$$\frac{\delta_B}{\delta_A}=\frac{1+2n}{1+n}$$
+
+#### (ii)
+$$\frac{\delta_C}{\delta_A}=1$$
 
 
+### (d)
+$$\beta=\frac{1}{\dfrac{N_B}{N_E}\cdot\dfrac{D_E}{D_B}\cdot\dfrac{x_B}{x_E}+\dfrac{1}{2}\left(\dfrac{x_B}{L_B}\right)^2+\dfrac{J_{r0}}{J_{s0}}\exp\dfrac{-eV_{BE}}{2kT}}$$
 
-
+According to the expression, can can find that $N_B$ and $x_B$ should be smaller so that $\beta$ will become larger. So Device C should be chosen.
 
 
 
