@@ -1,0 +1,51 @@
+---
+title: "VE320 Homework7"
+author: "Liu Yihao 515370910207"
+date: "2018-08-03"
+output: 
+  pdf_document:
+    includes:
+      in_header: header.tex
+    latex_engine: xelatex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(latex2exp)
+```
+
+## Ex 7.1
+
+### (a)
+$$\phi_{B0}=0.65\unit{eV}$$
+$$I_{sT}=AA^*T^2\exp\frac{-\phi_{B0}}{V_T}=2.948\times10^{-8}\unit{A}$$
+
+#### (i)
+$$V_a=V_t\ln\frac{I}{I_{sT}}=0.151\unit{V}$$
+
+#### (ii)
+$$V_a=V_t\ln\frac{I}{I_{sT}}=0.211\unit{V}$$
+
+#### (iii)
+$$V_a=V_t\ln\frac{I}{I_{sT}}=0.270\unit{V}$$
+
+### (b)
+$$\phi_{B0}=0.65\unit{eV}$$
+$$I_{sT}=AA^*T^2\exp\frac{-\phi_{B0}}{V_T}=2.948\times10^{-8}\unit{A}$$
+
+#### (i)
+$$V_a=V_t\ln\frac{I}{I_{sT}}=0.151\unit{V}$$
+
+#### (ii)
+$$V_a=V_t\ln\frac{I}{I_{sT}}=0.211\unit{V}$$
+
+#### (iii)
+$$V_a=V_t\ln\frac{I}{I_{sT}}=0.270\unit{V}$$
+
+
+
+
+
+
+
+
